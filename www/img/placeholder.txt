@@ -1,0 +1,12 @@
+Placeholder images needed for the website:
+
+1. team-1.jpg - George at work (150x150px)
+2. team-2.jpg - Team member working (150x150px)  
+3. tools.jpg - Handyman tools (150x150px)
+4. plumbing.jpg - Plumbing work (80x80px)
+5. electrical.jpg - Electrical work (80x80px)
+6. carpentry.jpg - Carpentry work (80x80px)
+7. painting.jpg - Painting work (80x80px)
+8. george-portrait.jpg - Professional photo of George (400x300px)
+
+Note: These are temporary placeholders. Replace with actual photos from George once available.

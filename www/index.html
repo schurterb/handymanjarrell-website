@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Jarrell - Handyman Services</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Floating Hamburger Menu -->
+    <div class="hamburger-floating" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-close" onclick="toggleMenu()">&times;</div>
+        <ul class="nav-menu-mobile">
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+            <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">About & Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Handyman</h1>
+            <h1>At Your Service</h1>
+            <p class="hero-subtitle">George Jarrell</p>
+            <p class="hero-description">Professional handyman services for home repair and renovation</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('services')">What We Do</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('contact')">Contact Us</button>
+            </div>
+        </div>
+        <div class="hero-images">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=150&h=150&fit=crop&crop=center" alt="George at work" class="floating-img img-1">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=150&h=150&fit=crop&crop=center" alt="Team member" class="floating-img img-2">
+            <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=150&h=150&fit=crop&crop=center" alt="Tools" class="floating-img img-3">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>What We Do</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=80&h=80&fit=crop&crop=center" alt="Plumbing services">
+                    <h3>Plumbing</h3>
+                    <p>Professional plumbing repairs and installations</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=80&h=80&fit=crop&crop=center" alt="Electrical services">
+                    <h3>Electrical</h3>
+                    <p>Safe and reliable electrical work</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=80&h=80&fit=crop&crop=center" alt="Carpentry services">
+                    <h3>Carpentry</h3>
+                    <p>Custom woodwork and repairs</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=80&h=80&fit=crop&crop=center" alt="Painting services">
+                    <h3>Painting</h3>
+                    <p>Interior and exterior painting</p>
+                </div>
+            </div>
+            <div class="services-footer">
+                <button class="btn btn-primary" onclick="scrollToSection('contact')">Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonials-slider">
+                <button class="slider-arrow slider-arrow-left" onclick="slideTestimonials(-1)">&#8249;</button>
+                <div class="testimonials-container">
+                    <div class="testimonials-track" id="testimonialsTrack">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"George did an excellent job fixing our kitchen sink. Professional and reliable!"</p>
+                                <div class="testimonial-author">
+                                    <strong>- Sarah M.</strong>
+                                    <em class="placeholder-note">(placeholder example)</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Quick response and quality work. Highly recommend for any handyman needs."</p>
+                                <div class="testimonial-author">
+                                    <strong>- Mike R.</strong>
+                                    <em class="placeholder-note">(placeholder example)</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"George and his team transformed our bathroom. Great attention to detail!"</p>
+                                <div class="testimonial-author">
+                                    <strong>- Lisa K.</strong>
+                                    <em class="placeholder-note">(placeholder example)</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Fixed our deck perfectly and on time. Will definitely call George again!"</p>
+                                <div class="testimonial-author">
+                                    <strong>- Tom W.</strong>
+                                    <em class="placeholder-note">(placeholder example)</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Excellent electrical work. Safe, clean, and professional service."</p>
+                                <div class="testimonial-author">
+                                    <strong>- Jennifer L.</strong>
+                                    <em class="placeholder-note">(placeholder example)</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"George painted our entire house. Beautiful work and fair pricing!"</p>
+                                <div class="testimonial-author">
+                                    <strong>- David S.</strong>
+                                    <em class="placeholder-note">(placeholder example)</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Installed new light fixtures throughout our home. Professional and clean work!"</p>
+                                <div class="testimonial-author">
+                                    <strong>- Karen B.</strong>
+                                    <em class="placeholder-note">(placeholder example)</em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"George repaired our fence after the storm. Quick response and great results!"</p>
+                                <div class="testimonial-author">
+                                    <strong>- Robert H.</strong>
+                                    <em class="placeholder-note">(placeholder example)</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-arrow slider-arrow-right" onclick="slideTestimonials(1)">&#8250;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Contact Section -->
+    <section id="contact" class="about-contact">
+        <div class="container">
+            <div class="about-contact-content">
+                <div class="about-section">
+                    <div class="about-header">
+                        <h2>About</h2>
+                        <div class="about-image">
+                            <div class="profile-placeholder">
+                                <span>Profile Picture Here</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p>With over 15 years of experience, George and his team provide reliable handyman services to the local community. Our team is dedicated to quality workmanship and customer satisfaction.</p>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <h2>Contact Information</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <span>info@handymanjarrell.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+                            <span>(606) 481-5482</span>
+                        </div>
+                    </div>
+                    <a href="mailto:info@handymanjarrell.com?subject=Handyman Services Inquiry&body=Hi George,%0D%0A%0D%0AI'm interested in your handyman services. Please contact me to discuss my project.%0D%0A%0D%0AThank you!" class="btn btn-primary">Send Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
