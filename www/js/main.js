@@ -87,4 +87,121 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize testimonials slider
     updateArrowStates(document.getElementById('testimonialsTrack').children.length);
+    
+    // Initialize contact form functionality
+    setupContactForm();
 });
+
+// Contact form functionality
+function setupContactForm() {
+    // Get modal elements
+    const contactButton = document.getElementById('contact-button');
+    const contactModal = document.getElementById('contact-modal');
+    const closeButton = document.querySelector('.close-button');
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    // Initialize EmailJS
+    emailjs.init('YgBc_cQ0FjU5dwnUm'); // EmailJS public key
+
+    // Open modal when contact button is clicked
+    if (contactButton) {
+        contactButton.addEventListener('click', () => {
+            contactModal.style.display = 'block';
+        });
+    }
+
+    // Close modal when close button is clicked
+    if (closeButton) {
+        // Use mousedown instead of click for better responsiveness
+        closeButton.addEventListener('mousedown', (e) => {
+            e.preventDefault(); // Prevent any default behavior
+            console.log('Close button clicked');
+            contactModal.style.display = 'none';
+            formStatus.style.display = 'none';
+            formStatus.className = 'form-status';
+            contactForm.reset();
+        });
+        
+        // Also keep click event for accessibility
+        closeButton.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent any default behavior
+            console.log('Close button clicked (click event)');
+            contactModal.style.display = 'none';
+            formStatus.style.display = 'none';
+            formStatus.className = 'form-status';
+            contactForm.reset();
+        });
+    }
+
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', (event) => {
+        if (event.target === contactModal) {
+            contactModal.style.display = 'none';
+            formStatus.style.display = 'none';
+            formStatus.className = 'form-status';
+            contactForm.reset();
+        }
+    });
+
+    // Handle form submission
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const buttonText = submitButton.querySelector('.button-text');
+            const buttonIcon = submitButton.querySelector('.button-icon');
+            const originalButtonText = buttonText.textContent;
+            
+            buttonText.textContent = 'Sending...';
+            buttonIcon.textContent = '⟳';
+            buttonIcon.classList.add('spinning');
+            submitButton.disabled = true;
+            
+            // Get form data
+            const formData = {
+                name: contactForm.elements.name.value,
+                email: contactForm.elements.email.value,
+                subject: contactForm.elements.subject.value,
+                message: contactForm.elements.message.value
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('service_vxl1dqt', 'template_2vvld6l', formData)
+                .then(() => {
+                    // Success
+                    formStatus.textContent = 'Your message has been sent successfully!';
+                    formStatus.className = 'form-status success';
+                    formStatus.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Reset button
+                    buttonText.textContent = originalButtonText;
+                    buttonIcon.textContent = '→';
+                    buttonIcon.classList.remove('spinning');
+                    submitButton.disabled = false;
+                    
+                    // Close modal after a delay
+                    setTimeout(() => {
+                        contactModal.style.display = 'none';
+                        formStatus.style.display = 'none';
+                    }, 3000);
+                })
+                .catch((error) => {
+                    // Error
+                    console.error('Error sending email:', error);
+                    formStatus.textContent = 'Failed to send message. Please try again later.';
+                    formStatus.className = 'form-status error';
+                    formStatus.style.display = 'block';
+                    
+                    // Reset button
+                    buttonText.textContent = originalButtonText;
+                    buttonIcon.textContent = '→';
+                    buttonIcon.classList.remove('spinning');
+                    submitButton.disabled = false;
+                });
+        });
+    }
+}
