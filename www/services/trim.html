@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trim & Finishing Services - George Jarrell Handyman Services</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/service-page.css">
+    <!-- Additional CSS for service pages -->
+    <style>
+        .service-header {
+            background: linear-gradient(135deg, #228B22 0%, #8B4513 50%, #D2691E 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .service-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-content {
+            padding: 60px 0;
+        }
+        
+        .service-description {
+            margin-bottom: 40px;
+        }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .photo-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .photo-caption {
+            padding: 15px;
+            background-color: white;
+        }
+        
+        .before-after {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .before-after-pair {
+            flex: 1 1 400px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .comparison {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .comparison-item {
+            flex: 1;
+        }
+        
+        .comparison-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .comparison-labels {
+            display: flex;
+        }
+        
+        .comparison-labels span {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: #faf8f5;
+            font-weight: bold;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .back-to-home .btn {
+            margin: 0 10px;
+        }
+        
+        /* Header navigation */
+        .page-nav {
+            padding: 15px 0;
+            background-color: #faf8f5;
+            border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+        }
+        
+        .page-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .page-nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8B4513;
+            text-decoration: none;
+        }
+        
+        .page-nav .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .page-nav .nav-links a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .page-nav .nav-links a:hover {
+            color: #8B4513;
+        }
+        
+        /* Mobile nav */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #8B4513;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none !important;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                background-color: #faf8f5;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+            }
+            
+            .nav-links.active {
+                display: flex !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Navigation -->
+    <nav class="page-nav">
+        <div class="container">
+            <a href="../index.html" class="logo">George Jarrell</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#testimonials">Testimonials</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+            <button class="mobile-nav-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Service Header -->
+    <header class="service-header">
+        <h1>Trim & Finishing Services</h1>
+        <p>Crown molding, baseboards, and detail work</p>
+    </header>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-description">
+                <h2>About Our Trim & Finishing Services</h2>
+                <p>At George Jarrell Handyman Services, we understand that the finishing touches make all the difference in your home's appearance. Our trim and finishing services add those essential details that complete a room, enhance architectural features, and increase your home's overall value and appeal.</p>
+                <p>Our trim and finishing services include:</p>
+                <ul>
+                    <li>Crown molding installation and repair</li>
+                    <li>Baseboard installation and replacement</li>
+                    <li>Door and window casing</li>
+                    <li>Chair rail and wainscoting installation</li>
+                    <li>Custom trim work and decorative moldings</li>
+                    <li>Interior door installation and finishing</li>
+                    <li>Stair components (newel posts, balusters, handrails)</li>
+                </ul>
+                <p>Our skilled craftsmen have the precision and attention to detail required for high-quality trim work. We take careful measurements, make precise cuts, and ensure seamless joining for a polished, professional look. Whether you're looking to add character to a newly renovated space or replace worn trim throughout your home, we deliver superior results that enhance your home's beauty.</p>
+            </div>
+
+            <h2>Examples of Our Work</h2>
+
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="../img/trim-edging.jpg" alt="Trim work">
+                    <div class="photo-caption">
+                        <h3>Professional Trim Work</h3>
+                        <p>Quality trim and edging installation</p>
+                    </div>
+                </div>
+                <div class="photo-item">
+                    <img src="../img/kitchen-counter-3.jpg" alt="Kitchen trim">
+                    <div class="photo-caption">
+                        <h3>Kitchen Trim & Finishing</h3>
+                        <p>Professional kitchen trim and counter work</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-to-home">
+                <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+                <a href="../index.html#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile navigation toggle
+        document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
