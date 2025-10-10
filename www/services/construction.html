@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Services - George Jarrell Handyman Services</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/service-page.css">
+    <!-- Additional CSS for service pages -->
+    <style>
+        .service-header {
+            background: linear-gradient(135deg, #228B22 0%, #8B4513 50%, #D2691E 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .service-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-content {
+            padding: 60px 0;
+        }
+        
+        .service-description {
+            margin-bottom: 40px;
+        }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .photo-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .photo-caption {
+            padding: 15px;
+            background-color: white;
+        }
+        
+        .before-after {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .before-after-pair {
+            flex: 1 1 400px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .comparison {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .comparison-item {
+            flex: 1;
+        }
+        
+        .comparison-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .comparison-labels {
+            display: flex;
+        }
+        
+        .comparison-labels span {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: #faf8f5;
+            font-weight: bold;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .back-to-home .btn {
+            margin: 0 10px;
+        }
+        
+        /* Header navigation */
+        .page-nav {
+            padding: 15px 0;
+            background-color: #faf8f5;
+            border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+        }
+        
+        .page-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .page-nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8B4513;
+            text-decoration: none;
+        }
+        
+        .page-nav .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .page-nav .nav-links a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .page-nav .nav-links a:hover {
+            color: #8B4513;
+        }
+        
+        /* Mobile nav */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #8B4513;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none !important;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                background-color: #faf8f5;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+            }
+            
+            .nav-links.active {
+                display: flex !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Navigation -->
+    <nav class="page-nav">
+        <div class="container">
+            <a href="../index.html" class="logo">George Jarrell</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#testimonials">Testimonials</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+            <button class="mobile-nav-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Service Header -->
+    <header class="service-header">
+        <h1>Construction Services</h1>
+        <p>Custom builds and structural projects</p>
+    </header>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-description">
+                <h2>About Our Construction Services</h2>
+                <p>At George Jarrell Handyman Services, we take on custom construction projects that transform your property. From building outdoor structures to major renovation work, our experienced team combines skilled craftsmanship with quality materials to bring your vision to life.</p>
+                <p>Our construction services include:</p>
+                <ul>
+                    <li>Custom outdoor structures (bridges, gazebos, sheds)</li>
+                    <li>Barn repairs and restoration</li>
+                    <li>Fence construction and installation</li>
+                    <li>Retaining walls</li>
+                    <li>Pergolas and arbors</li>
+                    <li>Outbuilding construction and repair</li>
+                    <li>Structural framing and repairs</li>
+                    <li>Foundation repairs</li>
+                </ul>
+                <p>We handle construction projects with careful planning, quality workmanship, and attention to local building codes. Whether you need a practical structure built or want to restore an aging barn or outbuilding, we have the skills and experience to complete your project successfully.</p>
+            </div>
+
+            <h2>Examples of Our Work</h2>
+
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="../img/bridge-carpentry.jpg" alt="Bridge construction">
+                    <div class="photo-caption">
+                        <h3>Custom Bridge Construction</h3>
+                        <p>Durable outdoor bridge built to last</p>
+                    </div>
+                </div>
+                <div class="photo-item">
+                    <img src="../img/barn-repair-after.jpg" alt="Barn restoration">
+                    <div class="photo-caption">
+                        <h3>Barn Restoration</h3>
+                        <p>Complete structural repair and restoration</p>
+                    </div>
+                </div>
+                <div class="photo-item">
+                    <img src="../img/fence-1.jpg" alt="Fence construction">
+                    <div class="photo-caption">
+                        <h3>Fence Installation</h3>
+                        <p>Custom fence construction with quality materials</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="before-after">
+                <div class="before-after-pair">
+                    <div class="comparison">
+                        <div class="comparison-item">
+                            <img src="../img/bridge-before.jpg" alt="Before">
+                        </div>
+                        <div class="comparison-item">
+                            <img src="../img/bridge-carpentry.jpg" alt="After">
+                        </div>
+                    </div>
+                    <div class="comparison-labels">
+                        <span>Before</span>
+                        <span>After</span>
+                    </div>
+                    <div class="photo-caption">
+                        <h3>Bridge Rebuild Project</h3>
+                        <p>Complete reconstruction of outdoor bridge with modern materials and techniques</p>
+                    </div>
+                </div>
+                <div class="before-after-pair">
+                    <div class="comparison">
+                        <div class="comparison-item">
+                            <img src="../img/barn-repair-before.jpg" alt="Before">
+                        </div>
+                        <div class="comparison-item">
+                            <img src="../img/barn-repair-after.jpg" alt="After">
+                        </div>
+                    </div>
+                    <div class="comparison-labels">
+                        <span>Before</span>
+                        <span>After</span>
+                    </div>
+                    <div class="photo-caption">
+                        <h3>Barn Structural Repair</h3>
+                        <p>Extensive restoration work preserving the structure while improving stability</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-to-home">
+                <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+                <a href="../index.html#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile navigation toggle
+        document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
