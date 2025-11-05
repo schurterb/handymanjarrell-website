@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /services/template.html
+
+Sitemap: https://handymanjarrell.com/sitemap.xml
